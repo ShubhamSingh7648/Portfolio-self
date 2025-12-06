@@ -5,13 +5,13 @@ const works = [
       imgSrc: '/images/project-1.png',
       title: 'foodies',
       tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://musify-5al0.onrender.com/'
+      projectLink: 'https://foodies-blond.vercel.app/'
     },
     {
       imgSrc: '/images/project-2.png',
       title: 'Movie search',
       tags: ['API', 'SPA'],
-      projectLink: 'https://pixstock-official.vercel.app/'
+      projectLink: 'https://movieapp-smoky-ten.vercel.app/'
     },
     {
       imgSrc: '/images/project-3.png',
@@ -23,7 +23,7 @@ const works = [
       imgSrc: '/images/project-4.png',
       title: 'portfolio',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee-org/https://portfolio-t21s.vercel.app/'
+      projectLink: 'https://portfolio-t21s.vercel.app/'
     },
     {
       imgSrc: '/images/project-5.png',
