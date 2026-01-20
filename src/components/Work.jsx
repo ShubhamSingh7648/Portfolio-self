@@ -1,7 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
 
-
 const works = [
   {
     imgSrc: '/images/FOODIES.png',
@@ -53,14 +52,29 @@ const works = [
   },
 ];
 
-
 const Work = () => {
   return (
     <section id="work" className="py-12 px-6 lg:px-12">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* Section Header */}
-        <div className="text-center mb-8">
+        {/* Section Header with Side Images */}
+        <div className="text-center mb-8 relative">
+          
+          {/* Left Image - Fixed 150x150px, hidden on mobile */}
+          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
+            <img 
+              src="/images/hello3.png" 
+              alt="Decoration"
+              className="animate-float"
+              style={{ 
+                width: '150px', 
+                height: '150px',
+                objectFit: 'contain'
+              }}
+            />
+          </div>
+
+          {/* Center Image with Title */}
           <div className="fireship-header mb-4 flex justify-center items-center">
             <img 
               src="/images/projects.png" 
@@ -69,11 +83,27 @@ const Work = () => {
               style={{ maxWidth: '900px' }}
             />
           </div>
-          <p className="text-xl  font-bold text-zinc-300 max-w-2xl mx-auto">
-            Some of my projects that helped me learn.
-          </p>
+
+          {/* Right Image - Fixed 150x150px, hidden on mobile */}
+          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
+            <img 
+              src="/images/hello4.png" 
+              alt="Decoration"
+              className="animate-float"
+              style={{ 
+                width: '150px', 
+                height: '150px',
+                objectFit: 'contain',
+                animationDelay: '1s'
+              }}
+            />
+          </div>
         </div>
 
+        {/* Subtitle */}
+        <p className="text-xl font-bold text-zinc-300 max-w-2xl mx-auto text-center mb-8">
+          Some of my projects that helped me learn.
+        </p>
 
         {/* Projects Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 mt-8 justify-items-center">
@@ -93,6 +123,5 @@ const Work = () => {
     </section>
   )
 }
-
 
 export default Work
