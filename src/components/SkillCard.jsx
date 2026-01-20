@@ -5,37 +5,37 @@ const SkillCard = ({
   imgSrc,
   label,
   desc,
-  borderColor,
-  bgColor,
+  cardColor,
   classes
 }) => {
   return (
-    <div className={`group flex overflow-hidden bg-black border-[6px] ${borderColor} rounded-xl h-[170px] transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] ${classes}`}>
-      
-      {/* Icon Container */}
-      <div className="w-[150px] flex-shrink-0 bg-zinc-950 p-4 flex items-center justify-center">
-        <div className="w-[100px] h-[100px] bg-zinc-900 rounded-xl flex items-center justify-center">
+    <article 
+      className={`fireship-card ${cardColor} ${classes}`}
+    >
+      <div className="grid grid-cols-[1fr_1.5fr] gap-4">
+        {/* Image */}
+        <figure>
           <img 
             src={imgSrc} 
             alt={label}
-            className="w-16 h-16 object-contain"
+            loading="lazy"
+            className="w-full rounded-md"
           />
+        </figure>
+
+        {/* Content */}
+        <div className="grid gap-2 content-start">
+          <header>
+            <h5 className="font-display uppercase text-2xl leading-[1.1]">
+              {label}
+            </h5>
+          </header>
+          <p className="text-sm leading-snug">
+            {desc}
+          </p>
         </div>
       </div>
-
-      {/* Content */}
-      <div className={`${bgColor} flex-1 px-6 py-5 flex flex-col justify-start`}>
-        <h3 
-          className="text-2xl text-black mb-2 uppercase leading-tight"
-          style={{ fontFamily: "'Bebas Neue', 'Arial Black', sans-serif", letterSpacing: '0.05em' }}
-        >
-          {label}
-        </h3>
-        <p className="text-sm text-black/90 font-medium leading-snug line-clamp-2">
-          {desc}
-        </p>
-      </div>
-    </div>
+    </article>
   )
 }
 
@@ -43,8 +43,7 @@ SkillCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  borderColor: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired,
+  cardColor: PropTypes.string.isRequired,
   classes: PropTypes.string
 }
 

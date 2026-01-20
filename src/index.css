@@ -1,6 +1,19 @@
-
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Fireship Brand Colors - EXACT */
+:root {
+  --brand-coal: #0f0d0e;
+  --brand-charcoal: #231f20;
+  --brand-beige: #f9f4da;
+  --brand-green: #1dd1a1;
+  --brand-cyan: #22d3ee;
+  --brand-pink: #ec4899;
+  --brand-purple: #a855f7;
+  --brand-amber: #fbbf24;
+  --brand-orange: #fb923c;
+  --brand-red: #ef4444;
+  --gray-25: #f7f7f7;
+}
 
 html {
   scroll-behavior: smooth;
@@ -9,22 +22,24 @@ html {
 
 body {
   @apply bg-zinc-950 text-zinc-50;
+  background-color: var(--brand-coal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* Logo name font - ONLY for the name in header */
 .logo-name {
   font-family: 'Changa One', sans-serif;
   font-weight: 400;
 }
 
-
 /* Selection color - Fireship style */
 ::selection {
-  @apply bg-emerald-400 text-zinc-950;
+  background-color: var(--brand-green);
+  color: var(--brand-charcoal);
 }
 
-/* Fireship font for headings - Bebas Neue (Cubano alternative) */
+/* Fireship font for headings - Bebas Neue */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif;
   font-weight: 400;
@@ -36,19 +51,74 @@ h1, h2, h3, h4, h5, h6 {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-/* Gradient headline */
-.headline-1 {
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Fireship-style header utility */
+.fireship-header {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-beige);
+  text-align: center;
 }
 
-/* Fireship gradient text */
+/* Fireship Card - EXACT MATCH */
+.fireship-card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--brand-charcoal);
+  filter: drop-shadow(8px 8px 0px var(--brand-charcoal));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fireship-card:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(10px 10px 0px var(--brand-charcoal));
+}
+
+/* Specific card colors */
+.card-green {
+  background-color: var(--brand-green);
+  color: var(--brand-charcoal);
+}
+
+.card-beige {
+  background-color: var(--brand-beige);
+  color: var(--brand-charcoal);
+}
+
+.card-cyan {
+  background-color: var(--brand-cyan);
+  color: var(--brand-charcoal);
+}
+
+.card-pink {
+  background-color: var(--brand-pink);
+  color: var(--brand-charcoal);
+}
+
+.card-purple {
+  background-color: var(--brand-purple);
+  color: var(--brand-charcoal);
+}
+
+.card-amber {
+  background-color: var(--brand-amber);
+  color: var(--brand-charcoal);
+}
+
+.card-orange {
+  background-color: var(--brand-orange);
+  color: var(--brand-charcoal);
+}
+
+.card-red {
+  background-color: var(--brand-red);
+  color: var(--brand-charcoal);
+}
+
+/* Remove gradient text - use solid colors */
 .gradient-text {
-  background: linear-gradient(135deg, #34d399, #22d3ee, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--brand-cyan);
   font-family: 'Bebas Neue', 'Arial Black', sans-serif;
 }
 
@@ -72,15 +142,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-950;
+  background-color: var(--brand-coal);
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-emerald-500 rounded-full;
+  background-color: var(--brand-green);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-emerald-400;
+  background-color: var(--brand-cyan);
 }
 
 /* Animations */
@@ -99,10 +170,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes pulse-border {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4);
+    box-shadow: 0 0 0 0 rgba(29, 209, 161, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
+    box-shadow: 0 0 0 10px rgba(29, 209, 161, 0);
   }
 }
 
@@ -123,4 +194,23 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Font Display for Headings */
+.font-display {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

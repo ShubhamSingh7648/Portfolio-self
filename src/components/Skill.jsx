@@ -3,66 +3,58 @@ import SkillCard from './SkillCard';
 
 const skillItem = [
   {
-    imgSrc: '/images/figma.svg',
+    imgSrc: '/images/figmalogo.png',
     label: 'Figma',
     desc: 'Figma is a collaborative design tool for creating beautiful user interfaces and prototypes.',
-    borderColor: 'border-emerald-500',
-    bgColor: 'bg-emerald-500'
+    cardColor: 'card-green'
   },
   {
-    imgSrc: '/images/css3.svg',
+    imgSrc: '/images/css.jpg',
     label: 'CSS',
     desc: 'CSS3 brings powerful styling capabilities to create stunning, responsive user interfaces.',
-    borderColor: 'border-amber-100',
-    bgColor: 'bg-amber-100'
+    cardColor: 'card-beige'
   },
   {
-    imgSrc: '/images/javascript.svg',
+    imgSrc: '/images/jslogo.png',
     label: 'JavaScript',
     desc: 'JavaScript powers interactive web experiences, enabling dynamic content and user interactions.',
-    borderColor: 'border-pink-400',
-    bgColor: 'bg-pink-400'
+    cardColor: 'card-pink'
   },
   {
-    imgSrc: '/images/nodejs.svg',
+    imgSrc: '/images/nodelogo.png',
     label: 'NodeJS',
     desc: 'Node.js is a powerful JavaScript runtime for building scalable web servers and backend applications.',
-    borderColor: 'border-purple-400',
-    bgColor: 'bg-purple-400'
+    cardColor: 'card-purple'
   },
   {
-    imgSrc: '/images/expressjs.svg',
+    imgSrc: '/images/expresslogo.png',
     label: 'ExpressJS',
     desc: 'Express is a minimal Node.js framework for building robust web applications and RESTful APIs.',
-    borderColor: 'border-cyan-400',
-    bgColor: 'bg-cyan-400'
+    cardColor: 'card-cyan'
   },
   {
-    imgSrc: '/images/mongodb.svg',
+    imgSrc: '/images/mongologo.png',
     label: 'MongoDB',
     desc: 'MongoDB is a NoSQL database that provides flexible, scalable data storage for modern applications.',
-    borderColor: 'border-red-500',
-    bgColor: 'bg-red-500'
+    cardColor: 'card-red'
   },
   {
     imgSrc: '/images/react.svg',
     label: 'React',
     desc: 'React is a powerful JavaScript library for building fast, interactive user interfaces with components.',
-    borderColor: 'border-amber-400',
-    bgColor: 'bg-amber-400'
+    cardColor: 'card-amber'
   },
   {
-    imgSrc: '/images/tailwindcss.svg',
+    imgSrc: '/images/tailwindlogo.png',
     label: 'TailwindCSS',
     desc: 'Tailwind CSS is a utility-first framework that speeds up development with pre-built classes.',
-    borderColor: 'border-emerald-500',
-    bgColor: 'bg-emerald-500'
+    cardColor: 'card-green'
   },
 ];
 
 const Skill = () => {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-12 bg-black">
+    <section id="skills" className="py-20 px-6 lg:px-12">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header */}
@@ -73,21 +65,24 @@ const Skill = () => {
           >
             SNACKS
           </h2>
-          <p className="text-lg text-zinc-300 max-w-2xl mx-auto mt-6">
-            Get up to speed as quickly as possible with these bite-sized courses.
+          <p className="text-lg text-zinc-300 font-bold max-w-2xl mx-auto mt-6">
+          
+              Here are some <span className="text-orange-500 font-bold">Tools</span>. That is use to talk to
+              computers{' '}
+            
+     
           </p>
         </div>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillItem.map(({imgSrc, label, desc, borderColor, bgColor}, key) => (
+          {skillItem.map(({imgSrc, label, desc, cardColor}, key) => (
             <SkillCard 
               key={key}
               imgSrc={imgSrc}
               label={label}
               desc={desc}
-              borderColor={borderColor}
-              bgColor={bgColor}
+              cardColor={cardColor}
             />
           ))}
         </div>

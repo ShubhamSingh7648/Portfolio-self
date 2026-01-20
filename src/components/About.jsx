@@ -16,9 +16,49 @@ const About = () => {
     <section id="about" className="py-20 px-6 lg:px-12">
       <div className="max-w-screen-xl mx-auto">
         
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="fireship-header mb-6">THAT "A-HA" MOMENT</h2>
+        {/* Section Header with Side Images */}
+        <div className="text-center mb-16 relative">
+          {/* Left Image - Fixed 120x120px */}
+          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
+            <img 
+              src="/images/BMO.png" 
+              alt="Decoration"
+              style={{ 
+                width: '120px', 
+                height: '120px',
+                objectFit: 'contain'
+              }}
+            />
+          </div>
+
+          {/* Center Header with Background Box */}
+          <div className="inline-block">
+            <h2 
+              className="px-8 py-3 text-4xl md:text-5xl uppercase mb-4 inline-block"
+              style={{ 
+                fontFamily: "'Bebas Neue', 'Arial Black', sans-serif", 
+                letterSpacing: '0.05em',
+                backgroundColor: 'var(--brand-beige)',
+                color: 'var(--brand-charcoal)',
+                borderRadius: '0.5rem'
+              }}
+            >
+              THAT "A-HA" MOMENT
+            </h2>
+          </div>
+
+          {/* Right Image - Fixed 120x120px */}
+          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
+            <img 
+              src="/images/Hacker.png" 
+              alt="Decoration"
+              style={{ 
+                width: '120px', 
+                height: '120px',
+                objectFit: 'contain'
+              }}
+            />
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -35,21 +75,53 @@ const About = () => {
             </p>
           </div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid - Same style as skill cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            {aboutItems.map(({ label, number }, key) => (
+            <article className="fireship-card card-green p-8 text-center">
               <div 
-                key={key}
-                className="fireship-card border-emerald-400 p-8 text-center hover:shadow-[0_20px_50px_rgba(52,211,153,0.2)]"
+                className="text-6xl font-black mb-3"
+                style={{ 
+                  fontFamily: "'Bebas Neue', 'Arial Black', sans-serif",
+                  color: 'var(--brand-charcoal)',
+                  textShadow: '3px 3px 0px rgba(0,0,0,0.2)'
+                }}
               >
-                <div className="text-5xl font-black text-emerald-400 mb-3">
-                  {number}+
-                </div>
-                <div className="text-zinc-400 font-bold uppercase tracking-wide">
-                  {label}
-                </div>
+                15+
               </div>
-            ))}
+              <div 
+                className="uppercase tracking-wide text-sm font-bold"
+                style={{ 
+                  color: 'var(--brand-charcoal)',
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  letterSpacing: '0.1em'
+                }}
+              >
+                Projects Completed
+              </div>
+            </article>
+
+            <article className="fireship-card card-green p-8 text-center">
+              <div 
+                className="text-6xl font-black mb-3"
+                style={{ 
+                  fontFamily: "'Bebas Neue', 'Arial Black', sans-serif",
+                  color: 'var(--brand-charcoal)',
+                  textShadow: '3px 3px 0px rgba(0,0,0,0.2)'
+                }}
+              >
+                2+
+              </div>
+              <div 
+                className="uppercase tracking-wide text-sm font-bold"
+                style={{ 
+                  color: 'var(--brand-charcoal)',
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  letterSpacing: '0.1em'
+                }}
+              >
+                Years of Experience
+              </div>
+            </article>
           </div>
         </div>
       </div>

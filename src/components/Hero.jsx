@@ -3,68 +3,58 @@ import ButtonPrimary from "./Button";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 lg:px-12 relative overflow-hidden">
-      <div className="max-w-screen-xl mx-auto text-center relative z-10">
+    <section id="home" className="min-h-screen flex items-center pt-20 px-6 lg:px-12 relative overflow-hidden bg-black">
+      <div className="max-w-screen-xl mx-auto w-full">
         
-        {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 bg-emerald-400/10 border-2 border-emerald-400 rounded-full mb-8 pulse-badge">
-          <span className="text-2xl">⚡</span>
-          <span className="text-emerald-400 font-bold text-sm uppercase tracking-wide">
-            Available for work
-          </span>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
+          <div>
+            {/* Main Headline */}
+            <h1 
+              className="text-6xl md:text-7xl lg:text-8xl mb-6 leading-none"
+              style={{ fontFamily: "'Bebas Neue', 'Arial Black', sans-serif", letterSpacing: '0.02em' }}
+            >
+              <span className="text-amber-100">WELCOME TO MY</span>
+              <br />
+              <span className="text-cyan-400">PORTFOLIO</span>
+            </h1>
 
-        {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8 tracking-tight">
-          Hi, Welcome<br />
-          <span className="gradient-text">DEVELOPERS</span>
-        </h1>
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl font-bold text-zinc-50 mb-4 leading-relaxed">
+              Hey, I’m <span className="text-orange-500 font-bold">Shubham</span>. I talk to computers for a living.
+Sometimes they listen. Sometimes they throw errors{' '}
+              <span className="text-orange-500 font-bold">fun</span> &&{' '}
+              <span className="text-pink-400 font-bold">approachable</span>.
+            </p>
 
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Building scalable modern websites that are{' '}
-          <span className="text-emerald-400 font-bold">fun</span> &&{' '}
-          <span className="text-cyan-400 font-bold">approachable</span>.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-5 justify-center mb-16">
-          <ButtonPrimary 
-            href="#work"
-            label="VIEW MY WORK"
-            classes="bg-emerald-400 text-zinc-950 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-transparent hover:text-emerald-400 border-2 border-emerald-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(52,211,153,0.3)]"
-          />
-          <ButtonPrimary 
-            href="#contact"
-            label="GET IN TOUCH"
-            classes="bg-transparent text-zinc-50 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider border-2 border-zinc-50 hover:bg-zinc-50 hover:text-zinc-950 transition-all duration-300 hover:-translate-y-1"
-          />
-        </div>
-
-        {/* Visual Elements */}
-        <div className="flex items-center justify-center gap-8 flex-wrap mt-16">
-          {/* Code Can */}
-          <div className="w-40 h-52 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-3xl flex items-center justify-center text-5xl font-black text-zinc-950 float-animation shadow-2xl">
-            CODE
+            {/* CTA Button */}
+            <ButtonPrimary 
+              href="#work"
+              label="SEE MY PROJECTS"
+              classes="inline-block bg-amber-400 text-black px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-amber-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(251,191,36,0.3)] mt-8"
+            />
           </div>
 
-          {/* Tech Stack Snacks */}
-          <div className="flex flex-col gap-3">
-            <div className="px-8 py-4 bg-zinc-900 border-4 border-pink-500 rounded-xl font-black text-pink-500 text-lg transform rotate-2 hover:rotate-0 transition-transform">
-              TypeScript
-            </div>
-            <div className="px-8 py-4 bg-zinc-900 border-4 border-cyan-400 rounded-xl font-black text-cyan-400 text-lg transform -rotate-2 hover:rotate-0 transition-transform">
-              React
-            </div>
-            <div className="px-8 py-4 bg-zinc-900 border-4 border-amber-400 rounded-xl font-black text-amber-400 text-lg transform rotate-1 hover:rotate-0 transition-transform">
-              Node.js
+          {/* Right Visual - CUSTOM IMAGE with floating animation */}
+          <div className="flex items-center justify-center lg:justify-end">
+            <div className="relative">
+              {/* CUSTOM FLOATING IMAGE - Fixed 400x400px size */}
+              <img 
+                src="/images/retro.png" 
+                alt="Hero Illustration"
+                className="float-animation"
+                style={{ 
+                  width: '400px', 
+                  height: '400px',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent pointer-events-none"></div>
     </section>
   )
 }

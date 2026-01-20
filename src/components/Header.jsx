@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './Navbar'
 import { useState } from 'react'
 
-
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -12,20 +11,24 @@ const Header = () => {
         
         {/* Logo and Name - Left */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-orange-600">
-            <span className="material-symbols-rounded text-zinc-950 text-2xl">local_fire_department</span>
+          {/* CUSTOM IMAGE LOGO - Fixed 40x40px size */}
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br overflow-hidden">
+            <img 
+              src="/images/navLogo.png" 
+              alt="Logo"
+              className="w-full h-full object-cover"
+              style={{ width: '40px', height: '40px' }}
+            />
           </div>
-   <span 
-  className="logo-name text-3xl text-[#00d3f2] tracking-wider"
-  style={{
-    textShadow: '0 0 20px rgba(0, 211, 242, 0.5)'
-  }}
->
-  SHUBHAM
-</span>
-
-
-
+          
+          <span 
+            className="logo-name text-3xl text-[#00d3f2] tracking-wider"
+            style={{
+              textShadow: '0 0 20px rgba(0, 211, 242, 0.5)'
+            }}
+          >
+            SHUBHAM
+          </span>
         </div>
 
         {/* Desktop Navigation - Center */}

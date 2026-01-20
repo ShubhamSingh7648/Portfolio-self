@@ -1,75 +1,69 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const borderColors = [
-  'border-emerald-400',
-  'border-cyan-400',
-  'border-pink-500',
-  'border-amber-400',
-  'border-purple-500',
-  'border-rose-500'
-];
-
 const ProjectCard = ({
   imgSrc,
   title,
+  desc,
   tags,
   projectLink,
+  cardColor,
   classes
 }) => {
-  const randomBorder = borderColors[Math.floor(Math.random() * borderColors.length)];
-  
   return (
-    <div className={`fireship-card ${randomBorder} overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)] group ${classes}`}>
-      {/* Project Image */}
-      <figure className="w-full h-52 bg-zinc-800 overflow-hidden">
-        <img 
-          src={imgSrc} 
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
-      </figure>
+    <article 
+      className={`fireship-card ${cardColor} max-w-[350px] ${classes}`}
+      style={{ filter: 'drop-shadow(8px 8px 0px rgb(23, 23, 23))' }}
+    >
+      <a href={projectLink} target="_blank" rel="noopener noreferrer" className="grid gap-4">
+        {/* Project Image */}
+        <figure>
+          <img 
+            src={imgSrc} 
+            alt={title}
+            loading="lazy"
+            className="w-full rounded-md"
+          />
+        </figure>
 
-      {/* Project Info */}
-      <div className="p-6">
-        <h3 className="text-2xl font-black text-zinc-50 mb-3 uppercase tracking-wide">
-          {title}
-        </h3>
+        {/* Content */}
+        <div className="grid gap-2">
+          <header>
+            <h5 className="font-display uppercase text-2xl leading-[1.1]">
+              {title}
+            </h5>
+          </header>
+          <p className="text-sm leading-snug">
+            {desc}
+          </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag, key) => (
-            <span 
-              key={key}
-              className="px-3 py-1 bg-zinc-950 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-400 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
+          {/* Tags */}
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-2">
+              {tags.map((tag, key) => (
+                <span 
+                  key={key}
+                  className="px-3 py-1 bg-emerald-400/20 border border-emerald-600 rounded-full text-xs font-bold uppercase tracking-wide"
+                  style={{ color: 'var(--brand-charcoal)' }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-
-        {/* Link */}
-        {projectLink && (
-          <a 
-            href={projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors uppercase tracking-wide"
-          >
-            View Project
-            <span className="text-lg">→</span>
-          </a>
-        )}
-      </div>
-    </div>
+      </a>
+    </article>
   )
 }
 
 ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
+  desc: PropTypes.string.isRequired,
+  tags: PropTypes.array,
   projectLink: PropTypes.string,
+  cardColor: PropTypes.string.isRequired,
   classes: PropTypes.string
 }
 

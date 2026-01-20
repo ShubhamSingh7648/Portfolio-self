@@ -1,61 +1,91 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
 
+
 const works = [
   {
-    imgSrc: '/images/project-1.png',
+    imgSrc: '/images/FOODIES.png',
     title: 'Foodies',
+    desc: 'The interactive way to master modern food delivery apps.',
     tags: ['API', 'MVC', 'Development'],
-    projectLink: 'https://foodies-blond.vercel.app/'
+    projectLink: 'https://foodies-blond.vercel.app/',
+    cardColor: 'card-cyan'
   },
   {
-    imgSrc: '/images/project-2.png',
+    imgSrc: '/images/MOVIE-1.png',
     title: 'Movie Search',
+    desc: 'Master React with mystifying ease with this movie app.',
     tags: ['API', 'SPA'],
-    projectLink: 'https://movieapp-smoky-ten.vercel.app/'
+    projectLink: 'https://movieapp-smoky-ten.vercel.app/',
+    cardColor: 'card-beige'
   },
   {
     imgSrc: '/images/project-3.png',
     title: 'King Of Diamond',
+    desc: 'The interactive way to master modern e-commerce.',
     tags: ['Development', 'API'],
-    projectLink: ''
+    projectLink: '',
+    cardColor: 'card-pink'
   },
   {
     imgSrc: '/images/project-4.png',
     title: 'Portfolio',
+    desc: 'The interactive way to master modern portfolio design.',
     tags: ['Web-design', 'Development'],
-    projectLink: 'https://portfolio-t21s.vercel.app/'
+    projectLink: 'https://portfolio-t21s.vercel.app/',
+    cardColor: 'card-purple'
   },
   {
-    imgSrc: '/images/project-5.png',
+    imgSrc: '/images/HOTEL.png',
     title: 'WonderLust',
+    desc: 'The interactive way to master modern travel booking.',
     tags: ['Full-Stack', 'Development'],
-    projectLink: 'https://wonder-lust-beryl.vercel.app/listings'
+    projectLink: 'https://wonder-lust-beryl.vercel.app/listings',
+    cardColor: 'card-green'
+  },
+  {
+    imgSrc: '/images/project-1.png',
+    title: 'React App',
+    desc: 'The interactive way to master modern React applications.',
+    tags: ['React', 'Frontend'],
+    projectLink: '',
+    cardColor: 'card-amber'
   },
 ];
 
+
 const Work = () => {
   return (
-    <section id="work" className="py-20 px-6 lg:px-12">
-      <div className="max-w-screen-xl mx-auto">
+    <section id="work" className="py-12 px-6 lg:px-12">
+      <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="fireship-header mb-6">MY PROJECTS</h2>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Get up to speed as quickly as possible with these bite-sized project showcases.
+        <div className="text-center mb-8">
+          <div className="fireship-header mb-4 flex justify-center items-center">
+            <img 
+              src="/images/projects.png" 
+              alt="My Projects" 
+              className="h-56 md:h-72 lg:h-80 w-auto object-contain animate-float"
+              style={{ maxWidth: '900px' }}
+            />
+          </div>
+          <p className="text-xl  font-bold text-zinc-300 max-w-2xl mx-auto">
+            Some of my projects that helped me learn.
           </p>
         </div>
 
+
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {works.map(({ imgSrc, title, tags, projectLink }, key) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 mt-8 justify-items-center">
+          {works.map(({ imgSrc, title, desc, tags, projectLink, cardColor }, key) => (
             <ProjectCard 
               key={key}
               imgSrc={imgSrc}
               title={title}
+              desc={desc}
               tags={tags}
               projectLink={projectLink}
+              cardColor={cardColor}
             />
           ))}
         </div>
@@ -63,5 +93,6 @@ const Work = () => {
     </section>
   )
 }
+
 
 export default Work
