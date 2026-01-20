@@ -10,12 +10,12 @@ const ButtonPrimary = ({
 }) => {
   return (
     <a 
-      href={href || '#'}
+      href={href}
       target={target}
-      className={`px-6 py-3 bg-zinc-50 text-zinc-900 rounded-xl font-medium flex items-center gap-2 ${classes || ''}`}
+      className={`inline-flex items-center gap-3 ${classes}`}
     >
       {label}
-      {icon && <span className="material-symbols-rounded">{icon}</span>}
+      {icon && <span aria-hidden="true">{icon}</span>}
     </a>
   )
 }
@@ -27,7 +27,5 @@ ButtonPrimary.propTypes = {
   icon: PropTypes.string,
   classes: PropTypes.string
 }
-
-
 
 export default ButtonPrimary

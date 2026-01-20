@@ -1,59 +1,65 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
-const works = [
-    {
-      imgSrc: '/images/project-1.png',
-      title: 'foodies',
-      tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://foodies-blond.vercel.app/'
-    },
-    {
-      imgSrc: '/images/project-2.png',
-      title: 'Movie search',
-      tags: ['API', 'SPA'],
-      projectLink: 'https://movieapp-smoky-ten.vercel.app/'
-    },
-    {
-      imgSrc: '/images/project-3.png',
-      title: 'King Of Diamond',
-      tags: ['Development', 'API'],
-      projectLink: ''
-    },
-    {
-      imgSrc: '/images/project-4.png',
-      title: 'portfolio',
-      tags: ['Web-design', 'Development'],
-      projectLink: 'https://portfolio-t21s.vercel.app/'
-    },
-    {
-      imgSrc: '/images/project-5.png',
-      title: 'Online hotel reservation',
-      tags: [ 'Development'],
-      projectLink: 'https://wonder-lust-beryl.vercel.app/listings'
-    },
 
-  ];
+const works = [
+  {
+    imgSrc: '/images/project-1.png',
+    title: 'Foodies',
+    tags: ['API', 'MVC', 'Development'],
+    projectLink: 'https://foodies-blond.vercel.app/'
+  },
+  {
+    imgSrc: '/images/project-2.png',
+    title: 'Movie Search',
+    tags: ['API', 'SPA'],
+    projectLink: 'https://movieapp-smoky-ten.vercel.app/'
+  },
+  {
+    imgSrc: '/images/project-3.png',
+    title: 'King Of Diamond',
+    tags: ['Development', 'API'],
+    projectLink: ''
+  },
+  {
+    imgSrc: '/images/project-4.png',
+    title: 'Portfolio',
+    tags: ['Web-design', 'Development'],
+    projectLink: 'https://portfolio-t21s.vercel.app/'
+  },
+  {
+    imgSrc: '/images/project-5.png',
+    title: 'WonderLust',
+    tags: ['Full-Stack', 'Development'],
+    projectLink: 'https://wonder-lust-beryl.vercel.app/listings'
+  },
+];
 
 const Work = () => {
   return (
-    <section id="work" className='section px-4 sm:px-6 lg:px-8 py-12'>
-        <div className="container mx-auto max-w-7xl">
-            <h2 className="headline-2 mb-8 text-3xl lg:text-4xl lg:leading-tight font-semibold text-center md:text-left">
-                My portfolio highlights
-            </h2>
-            <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-                {works.map(({ imgSrc, title, tags, projectLink }, key) => (
-                    <ProjectCard 
-                        key={key}
-                        imgSrc={imgSrc}
-                        title={title}
-                        tags={tags}
-                        projectLink={projectLink}
-                        classes="w-full" // Ensure cards take full grid width
-                    />
-                ))}
-            </div>
+    <section id="work" className="py-20 px-6 lg:px-12">
+      <div className="max-w-screen-xl mx-auto">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="fireship-header mb-6">MY PROJECTS</h2>
+          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            Get up to speed as quickly as possible with these bite-sized project showcases.
+          </p>
         </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {works.map(({ imgSrc, title, tags, projectLink }, key) => (
+            <ProjectCard 
+              key={key}
+              imgSrc={imgSrc}
+              title={title}
+              tags={tags}
+              projectLink={projectLink}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

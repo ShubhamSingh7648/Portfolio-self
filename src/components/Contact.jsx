@@ -3,131 +3,154 @@ import React from 'react'
 const socialLinks = [
   {
     href: 'https://github.com/ShubhamSingh7648',
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48603 2 2 6.48604 2 12C2 17.514 6.48603 22 12 22C17.514 22 22 17.514 22 12C22 6.48604 17.514 2 12 2ZM12 3.5C16.7033 3.5 20.5 7.2967 20.5 12C20.5 15.8327 17.9785 19.0613 14.5 20.126V17.5684C14.5 16.6133 13.9497 15.7943 13.1543 15.3867C13.9276 15.2388 14.6457 14.9454 15.249 14.5309C15.8522 14.1165 16.3232 13.5929 16.6228 13.0037C16.9224 12.4145 17.0421 11.7765 16.9718 11.1429C16.9015 10.5093 16.6434 9.89818 16.2188 9.36035C16.4405 8.67771 16.6883 7.48034 16.0996 6.53809C14.9647 6.53809 14.2323 7.31604 13.8828 7.7998C13.2853 7.60352 12.6459 7.5017 12 7.5C11.3537 7.50057 10.7136 7.60139 10.1152 7.79688C9.76487 7.31289 9.03311 6.53809 7.90039 6.53809C7.22486 7.61941 7.64246 8.78228 7.86621 9.25684C7.41288 9.79235 7.12862 10.4078 7.03781 11.0505C6.94699 11.6931 7.05233 12.3438 7.34478 12.9468C7.63723 13.5498 8.10809 14.087 8.71698 14.5124C9.32587 14.9379 10.0546 15.2389 10.8408 15.3896C10.1877 15.7262 9.69864 16.337 9.54883 17.0781H8.8916C8.2431 17.0781 7.99112 16.8146 7.64062 16.3701C7.29463 15.9256 6.92259 15.6269 6.47559 15.5029C6.23459 15.4774 6.07223 15.6607 6.28223 15.8232C6.99173 16.3062 7.0407 17.0968 7.3252 17.6143C7.5842 18.0803 8.11484 18.5 8.71484 18.5H9.5V20.126C6.02153 19.0613 3.5 15.8327 3.5 12C3.5 7.2967 7.29669 3.5 12 3.5Z" fill="currentColor" />
-    </svg>,
-    alt: 'GitHub'
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    ),
+    alt: 'GitHub',
+    color: 'emerald'
   },
   {
     href: 'https://www.linkedin.com/in/shubham-singh-b442822b6/',
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.75 3C4.24011 3 3 4.24011 3 5.75V18.25C3 19.7599 4.24011 21 5.75 21H18.25C19.7599 21 21 19.7599 21 18.25V5.75C21 4.24011 19.7599 3 18.25 3H5.75ZM5.75 4.5H18.25C18.9491 4.5 19.5 5.05089 19.5 5.75V18.25C19.5 18.9491 18.9491 19.5 18.25 19.5H5.75C5.05089 19.5 4.5 18.9491 4.5 18.25V5.75C4.5 5.05089 5.05089 4.5 5.75 4.5ZM7.75 6.5C7.41848 6.5 7.10054 6.6317 6.86612 6.86612C6.6317 7.10054 6.5 7.41848 6.5 7.75C6.5 8.08152 6.6317 8.39946 6.86612 8.63388C7.10054 8.8683 7.41848 9 7.75 9C8.08152 9 8.39946 8.8683 8.63388 8.63388C8.8683 8.39946 9 8.08152 9 7.75C9 7.41848 8.8683 7.10054 8.63388 6.86612C8.39946 6.6317 8.08152 6.5 7.75 6.5ZM7 10C6.7235 10 6.5 10.2235 6.5 10.5V17C6.5 17.2765 6.7235 17.5 7 17.5H8.5C8.7765 17.5 9 17.2765 9 17V10.5C9 10.2235 8.7765 10 8.5 10H7ZM10.5 10C10.2235 10 10 10.2235 10 10.5V17C10 17.2765 10.2235 17.5 10.5 17.5H12C12.2765 17.5 12.5 17.2765 12.5 17V13.25C12.5 12.5605 13.0605 12 13.75 12C14.4395 12 15 12.5605 15 13.25V17C15 17.2765 15.2235 17.5 15.5 17.5H17C17.2765 17.5 17.5 17.2765 17.5 17V13C17.5 11.3455 16.1545 10 14.5 10C13.731 10 13.0315 10.293 12.5 10.7705V10.5C12.5 10.2235 12.2765 10 12 10H10.5Z" fill="currentColor" />
-    </svg>,
-    alt: 'LinkedIn'
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    ),
+    alt: 'LinkedIn',
+    color: 'cyan'
   },
   {
-    href: 'https://www.linkedin.com/in/shubham-singh-b442822b6/',
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6.25 3C4.46403 3 3 4.46403 3 6.25V17.75C3 19.536 4.46403 21 6.25 21H17.75C19.536 21 21 19.536 21 17.75V6.25C21 4.46403 19.536 3 17.75 3H6.25ZM6.25 4.5H17.75C18.725 4.5 19.5 5.27497 19.5 6.25V17.75C19.5 18.725 18.725 19.5 17.75 19.5H6.25C5.27497 19.5 4.5 18.725 4.5 17.75V6.25C4.5 5.27497 5.27497 4.5 6.25 4.5ZM6.91406 7L10.7822 12.5283L6.91113 17H7.93262L11.2344 13.1758L13.9102 17H17.1289L13.0127 11.1172L16.5684 7H15.5684L12.5615 10.4717L10.1328 7H6.91406ZM8.46777 7.84766H9.74902L15.5752 16.1523H14.2939L8.46777 7.84766Z" fill="currentColor" />
-    </svg>,
-    alt: 'Twitter X'
+    href: 'https://twitter.com/shubhamsingh',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    ),
+    alt: 'Twitter X',
+    color: 'pink'
   },
   {
-    href: 'https://www.linkedin.com/in/shubham-singh-b442822b6',
-    icon: <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.75 2.5C5.58319 2.5 3 5.08319 3 8.25V15.75C3 18.9164 5.5831 21.5 8.75 21.5H16.25C19.4165 21.5 22 18.9165 22 15.75V8.25C22 5.0831 19.4164 2.5 16.25 2.5H8.75ZM8.75 4H16.25C18.6056 4 20.5 5.8939 20.5 8.25V15.75C20.5 18.1055 18.6055 20 16.25 20H8.75C6.3939 20 4.5 18.1056 4.5 15.75V8.25C4.5 5.89381 6.39381 4 8.75 4ZM17.5 6C16.9475 6 16.5 6.4475 16.5 7C16.5 7.5525 16.9475 8 17.5 8C18.0525 8 18.5 7.5525 18.5 7C18.5 6.4475 18.0525 6 17.5 6ZM12.5 7C9.74759 7 7.5 9.24759 7.5 12C7.5 14.7524 9.74759 17 12.5 17C15.2524 17 17.5 14.7524 17.5 12C17.5 9.24759 15.2524 7 12.5 7ZM12.5 8.5C14.4416 8.5 16 10.0584 16 12C16 13.9416 14.4416 15.5 12.5 15.5C10.5584 15.5 9 13.9416 9 12C9 10.0584 10.5584 8.5 12.5 8.5Z" fill="currentColor" />
-    </svg>,
-    alt: 'Instagram'
+    href: 'https://www.instagram.com/shubhamsingh',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    ),
+    alt: 'Instagram',
+    color: 'purple'
   },
 ];
 
 const Contact = () => {
-  return (
-    <section id="contact" className="section px-4 sm:px-6 lg:px-8 py-16 bg-zinc-900">
-      <div className="container mx-auto lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start max-w-7xl">
-        <div className="mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-between lg:sticky lg:top-24 lg:self-start">
-          <div>
-            <h2 className="headline-1 text-4xl lg:text-5xl font-bold mb-6 lg:leading-tight">
-              Let's work <span className="text-sky-400">together</span>
-            </h2>
-            <p className="text-zinc-400 text-lg mb-10 max-w-md">
-              Reach out today to discuss your project needs and start collaborating on something amazing!
-            </p>
-          </div>
+  const colorClasses = {
+    emerald: 'border-emerald-400 text-emerald-400 hover:bg-emerald-400',
+    cyan: 'border-cyan-400 text-cyan-400 hover:bg-cyan-400',
+    pink: 'border-pink-500 text-pink-500 hover:bg-pink-500',
+    purple: 'border-purple-500 text-purple-500 hover:bg-purple-500'
+  };
 
-          <div className="mt-10">
-            <p className="text-zinc-300 font-medium mb-4">Connect with me</p>
-            <div className="flex items-center gap-3">
-              {socialLinks.map(({ href, icon, alt }, key) => (
-                <a 
-                  href={href} 
-                  key={key} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  aria-label={alt}
-                  className="w-12 h-12 grid place-items-center bg-zinc-800 hover:bg-zinc-700 rounded-xl transition-all duration-300 hover:text-sky-400 hover:scale-105 hover:shadow-lg hover:shadow-sky-400/10"
-                >
+  return (
+    <section id="contact" className="py-20 px-6 lg:px-12 bg-zinc-900/50">
+      <div className="max-w-screen-xl mx-auto">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 text-emerald-400 uppercase tracking-wider">
+            READY TO LEVEL UP?
+          </h2>
+          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            Reach out today to discuss your project needs and start collaborating on something amazing!
+          </p>
+        </div>
+
+        {/* Social Links */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-black text-zinc-300 mb-8 text-center uppercase tracking-wide">
+            Connect with me
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {socialLinks.map(({ href, icon, alt, color }, key) => (
+              <a
+                key={key}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`fireship-card ${colorClasses[color]} p-6 flex flex-col items-center justify-center gap-4 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] group hover:text-zinc-950 transition-all`}
+              >
+                <div className="w-12 h-12 flex items-center justify-center">
                   {icon}
-                </a>
-              ))}
-            </div>
+                </div>
+                <span className="font-bold text-sm uppercase tracking-wide">
+                  {alt}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
 
-        <div className="bg-zinc-800/50 rounded-2xl p-6 lg:p-8 backdrop-blur-sm border border-zinc-700/30 shadow-xl">
-          <h3 className="text-xl font-medium mb-6 text-zinc-100">Send me a message</h3>
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto fireship-card border-emerald-400 p-8 md:p-12 hover:shadow-[0_30px_60px_rgba(52,211,153,0.2)]">
+          <h3 className="text-3xl font-black text-zinc-50 mb-8 text-center uppercase tracking-wide">
+            Send me a message
+          </h3>
           
-          <form 
-            action="https://getform.io/f/bejrkewa" 
-            method="POST" 
-            className="space-y-6"
-          >
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="label">
-                  Name
-                </label>
-                <input 
-                  type="text"
-                  name="name" 
-                  id="name"
-                  autoComplete="name"
-                  required
-                  placeholder="Shubham Singh"
-                  className="text-field"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="label">
-                  Email
-                </label>
-                <input 
-                  type="email"
-                  name="email" 
-                  id="email"
-                  autoComplete="email"
-                  required
-                  placeholder="shubhams7648@gmail.com"
-                  className="text-field"
-                />
-              </div>
-            </div>
-            
+          <form className="space-y-6">
             <div>
-              <label htmlFor="message" className="label">
+              <label htmlFor="name" className="block text-sm font-bold text-zinc-300 mb-2 uppercase tracking-wide">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                required
+                className="w-full px-4 py-3 bg-zinc-950 border-2 border-zinc-700 rounded-lg text-zinc-50 focus:border-emerald-400 focus:outline-none transition-colors"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-bold text-zinc-300 mb-2 uppercase tracking-wide">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                required
+                className="w-full px-4 py-3 bg-zinc-950 border-2 border-zinc-700 rounded-lg text-zinc-50 focus:border-emerald-400 focus:outline-none transition-colors"
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-bold text-zinc-300 mb-2 uppercase tracking-wide">
                 Message
               </label>
-              <textarea 
-                name="message" 
+              <textarea
                 id="message"
-                className="text-field resize-y min-h-32 max-h-80"
-                placeholder="Tell me about your project..."
                 required
+                rows="5"
+                className="w-full px-4 py-3 bg-zinc-950 border-2 border-zinc-700 rounded-lg text-zinc-50 focus:border-emerald-400 focus:outline-none transition-colors resize-none"
+                placeholder="Tell me about your project..."
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
-              className="w-full py-3 px-6 bg-sky-500 hover:bg-sky-400 text-white font-medium rounded-xl transition-all duration-300 shadow-lg shadow-sky-500/20 hover:shadow-sky-400/30 flex items-center justify-center gap-2 group"
+            <button
+              type="submit"
+              className="w-full bg-emerald-400 text-zinc-950 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-transparent hover:text-emerald-400 border-2 border-emerald-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(52,211,153,0.3)]"
             >
-              Send Message
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 transition-transform">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
+              SEND MESSAGE
             </button>
           </form>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-20 pt-8 border-t border-zinc-800 text-center">
+          <p className="text-zinc-500 font-semibold">
+            &copy; 2026 Shubham Singh. Built with React & passion 🔥
+          </p>
         </div>
       </div>
     </section>

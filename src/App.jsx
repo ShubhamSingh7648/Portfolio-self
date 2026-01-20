@@ -5,21 +5,17 @@ import About from './components/About'
 import Skill from './components/Skill'
 import Work from './components/Work'
 import Contact from './components/Contact'
-// import Isha from './components/isha'
+
 const App = () => {
   return (
-    <>
+    <div className="bg-zinc-950 min-h-screen">
       <Header />
-      <main>
-      <Hero/>
-     <About />
+      <Hero />
+      <About />
       <Skill />
       <Work />
       <Contact />
-
-      </main>
-    
-      </>
+    </div>
   )
 }
 
