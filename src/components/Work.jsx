@@ -43,56 +43,52 @@ const works = [
     cardColor: 'card-green'
   },
   {
-    imgSrc: '/images/project-1.png',
-    title: 'React App',
+    imgSrc: '/images/project-6.png',
+    title: 'Contact Manager',
     desc: 'The interactive way to master modern React applications.',
-    tags: ['React', 'Frontend'],
-    projectLink: '',
+    tags: ['React', 'Frontend', 'CRUD'],
+    projectLink: 'https://contact-management-wesbite.vercel.app/',
     cardColor: 'card-amber'
   },
 ];
 
 const Work = () => {
   return (
-    <section id="work" className="py-12 px-6 lg:px-12">
+    <section id="work" className="py-8 md:py-12 px-4 md:px-6 lg:px-12">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header with Side Images */}
-        <div className="text-center mb-8 relative">
+        <div className="text-center mb-6 md:mb-8 relative">
           
-          {/* Left Image - Fixed 150x150px, hidden on mobile */}
-          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
+          {/* Left Image - BIGGER, hidden on mobile/tablet */}
+          <div className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2" style={{ left: '-10px' }}>
             <img 
               src="/images/hello3.png" 
               alt="Decoration"
-              className="animate-float"
+              className="animate-float w-44 h-44 2xl:w-52 2xl:h-52"
               style={{ 
-                width: '150px', 
-                height: '150px',
                 objectFit: 'contain'
               }}
             />
           </div>
 
-          {/* Center Image with Title */}
-          <div className="fireship-header mb-4 flex justify-center items-center">
+          {/* Center Image with Title - Responsive */}
+          <div className="fireship-header mb-2 md:mb-4 flex justify-center items-center">
             <img 
               src="/images/projects.png" 
               alt="My Projects" 
-              className="h-56 md:h-72 lg:h-80 w-auto object-contain animate-float"
-              style={{ maxWidth: '900px' }}
+              className="h-32 sm:h-40 md:h-56 lg:h-72 xl:h-80 w-auto object-contain animate-float"
+              style={{ maxWidth: '90%', marginLeft: 'auto', marginRight: 'auto' }}
             />
           </div>
 
-          {/* Right Image - Fixed 150x150px, hidden on mobile */}
-          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
+          {/* Right Image - BIGGER, hidden on mobile/tablet */}
+          <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2" style={{ right: '-10px' }}>
             <img 
               src="/images/hello4.png" 
               alt="Decoration"
-              className="animate-float"
+              className="animate-float w-44 h-44 2xl:w-52 2xl:h-52"
               style={{ 
-                width: '150px', 
-                height: '150px',
                 objectFit: 'contain',
                 animationDelay: '1s'
               }}
@@ -100,13 +96,13 @@ const Work = () => {
           </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-xl font-bold text-zinc-300 max-w-2xl mx-auto text-center mb-8">
+        {/* Subtitle - Responsive */}
+        <p className="text-base sm:text-lg md:text-xl font-bold text-zinc-300 max-w-2xl mx-auto text-center mb-6 md:mb-8">
           Some of my projects that helped me learn.
         </p>
 
-        {/* Projects Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 mt-8 justify-items-center">
+        {/* Projects Grid - Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mt-6 md:mt-8 justify-items-center">
           {works.map(({ imgSrc, title, desc, tags, projectLink, cardColor }, key) => (
             <ProjectCard 
               key={key}

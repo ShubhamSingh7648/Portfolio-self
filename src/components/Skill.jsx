@@ -54,21 +54,19 @@ const skillItem = [
 
 const Skill = () => {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-12">
+    <section id="skills" className="py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-12">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header with Side Images */}
-        <div className="text-center mb-12 relative">
+        <div className="text-center mb-8 md:mb-12 relative">
           
-          {/* Left Image - Fixed 120x120px, hidden on mobile */}
-          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
+          {/* Left Image - BIGGER, hidden on mobile/tablet */}
+          <div className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2" style={{ left: '-10px' }}>
             <img 
               src="/images/hello.png" 
               alt="Decoration"
-              className="animate-float"
+              className="animate-float w-36 h-36 2xl:w-44 2xl:h-44"
               style={{ 
-                width: '120px', 
-                height: '120px',
                 objectFit: 'contain'
               }}
             />
@@ -76,21 +74,19 @@ const Skill = () => {
 
           {/* Center Header */}
           <h2 
-            className="inline-block bg-purple-300 text-black px-8 py-3 text-4xl md:text-5xl uppercase mb-4"
+            className="inline-block bg-purple-300 text-black px-4 py-2 md:px-8 md:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase mb-2 md:mb-4"
             style={{ fontFamily: "'Bebas Neue', 'Arial Black', sans-serif", letterSpacing: '0.05em' }}
           >
             SNACKS
           </h2>
 
-          {/* Right Image - Fixed 120x120px, hidden on mobile */}
-          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
+          {/* Right Image - BIGGER, hidden on mobile/tablet */}
+          <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2" style={{ right: '-10px' }}>
             <img 
               src="/images/hello2.png" 
               alt="Decoration"
-              className="animate-float"
+              className="animate-float w-36 h-36 2xl:w-44 2xl:h-44"
               style={{ 
-                width: '120px', 
-                height: '120px',
                 objectFit: 'contain',
                 animationDelay: '1.5s'
               }}
@@ -98,13 +94,13 @@ const Skill = () => {
           </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-lg text-zinc-300 font-bold max-w-2xl mx-auto mt-6 mb-12 text-center">
+        {/* Subtitle - Responsive */}
+        <p className="text-sm sm:text-base md:text-lg text-zinc-300 font-bold max-w-2xl mx-auto mt-4 md:mt-6 mb-8 md:mb-12 text-center">
           Here are some <span className="text-orange-500 font-bold">Tools</span>. That is use to talk to computers
         </p>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Skills Grid - Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {skillItem.map(({imgSrc, label, desc, cardColor}, key) => (
             <SkillCard 
               key={key}
